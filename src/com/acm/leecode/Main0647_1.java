@@ -31,15 +31,35 @@ import java.util.Scanner;
 链接：https://leetcode.cn/problems/palindromic-substrings
 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 * */
-public class Main01 {
+public class Main0647_1 {
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
 
+        while (in.hasNext()) {
+            String s = in.nextLine();
+            int res = countSubstrings(s);
+            System.out.println(res);
+        }
     }
 
-    public int countSubstrings(String s) {
+    public static int countSubstrings(String s) {
         int count = 0;
-        for(int i=0;i<s.;)
+        for(int i=0;i<s.length();i++) {
+            for (int j=i+1; j<=s.length(); j++) {
+
+                String tempString = s.substring(i, j);
+                if (isHuiwen1(tempString)) count++;
+            }
+        }
+        return count;
+    }
+
+    private static boolean isHuiwen1(String tempString) {
+        if (tempString.length() == 1) return true;
+        for (int i=0;i<tempString.length()/2;i++) {
+            if (!(tempString.charAt(i) == tempString.charAt(tempString.length()-1-i))) return false;
+        }
+        return true;
     }
 }
