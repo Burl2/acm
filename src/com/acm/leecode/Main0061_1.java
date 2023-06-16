@@ -4,7 +4,7 @@ import com.acm.structure.ListNode;
 
 import java.util.Scanner;
 
-public class Main0061 {
+public class Main0061_1 {
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
