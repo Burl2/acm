@@ -22,7 +22,6 @@ public class Main04 {
             for(int i=0;i<sStr.length();i++) {
                 sum = sStr.charAt(i)-'0' + lStr.charAt(i) - '0' + carry;
                 carry = sum / 10;
-
                 res.append((char) (sum % 10 + '0'));
             }
             for (int i=sStr.length();i<lStr.length();i++) {
