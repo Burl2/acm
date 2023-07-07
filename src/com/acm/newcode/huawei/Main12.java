@@ -1,6 +1,6 @@
 package com.acm.newcode.huawei;
 
-import org.jetbrains.annotations.NotNull;
+//import org.jetbrains.annotations.NotNull;
 
 import java.util.*;
 
@@ -33,8 +33,8 @@ public class Main12 {
         }
     }
 
-    private static @NotNull
-    String encrypt2(@NotNull String secretKey, String plaintext) {
+    private static
+    String encrypt2( String secretKey, String plaintext) {
         List<Character> list = new ArrayList<>();
         for (char c : secretKey.toCharArray()) {
             if (!list.contains(c)) {
@@ -66,7 +66,7 @@ public class Main12 {
         return sb.toString();
     }
 
-    private static @NotNull String encrypt1(@NotNull String secretKey, String plaintext) {
+    private static  String encrypt1( String secretKey, String plaintext) {
         List<Character> list = new ArrayList<>();
         for (char c : secretKey.toCharArray()) {
             if (!list.contains(c)) {
